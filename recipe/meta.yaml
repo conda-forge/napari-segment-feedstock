@@ -12,12 +12,12 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.8,<3.11
   run:
     - dask-core
     - imageio-ffmpeg
@@ -25,7 +25,7 @@ requirements:
     - napari
     - nd2
     - numpy
-    - python >=3.8
+    - python >=3.8,<3.11
     - scikit-image
     - zarr
 
